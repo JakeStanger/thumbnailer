@@ -1,0 +1,23 @@
+{
+  "name": "thumbnailer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "yarn build -w",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "fast-exif": "^1.0.1",
+    "sharp": "^0.27.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.22",
+    "@types/sharp": "^0.27.1",
+    "prettier": "^2.2.1"
+  },
+  "files": [
+    "lib"
+  ]
+}
