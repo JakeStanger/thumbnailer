@@ -1,6 +1,6 @@
 {
-  "name": "thumbnailer",
-  "version": "1.0.1",
+  "name": "sharp-thumbnailer",
+  "version": "1.0.4",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
