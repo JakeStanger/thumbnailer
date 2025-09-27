@@ -25,8 +25,12 @@ async function thumbnailer(path: string, options: IThumbnailerOptions) {
 
   const { width, height, exif } = await image.metadata();
 
-  if(!width || !height) {
-    throw new Error('Image metadata is missing width/height');
+  if (!width) {
+    throw new Error('Image metadata is missing width');
+  }
+
+  if (!height) {
+    throw new Error('Image metadata is missing height');
   }
 
   if (options.exif && exif) {
@@ -37,7 +41,7 @@ async function thumbnailer(path: string, options: IThumbnailerOptions) {
   if (options.thumbnail) {
     returnData.thumbnail = await imageGenerator.generateThumbnail(
       image.clone(),
-      typeof options.thumbnail !== 'boolean' ? options.thumbnail : undefined
+      typeof options.thumbnail !== 'boolean' ? options.thumbnail : undefined,
     );
   }
 
@@ -46,7 +50,7 @@ async function thumbnailer(path: string, options: IThumbnailerOptions) {
       image.clone(),
       width,
       height,
-      options.marked
+      options.marked,
     );
   }
 
