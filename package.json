@@ -1,21 +1,21 @@
 {
   "name": "thumbnailer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "watch": "yarn build -w",
-    "prepublishOnly": "yarn build"
+    "watch": "pmpm build -w",
+    "prepublishOnly": "pmpm build"
   },
   "dependencies": {
-    "fast-exif": "^1.0.1",
-    "sharp": "^0.27.0"
+    "fast-exif": "^2.0.1",
+    "sharp": "^0.34.4"
   },
   "devDependencies": {
-    "@types/node": "^14.14.22",
-    "@types/sharp": "^0.27.1",
-    "prettier": "^2.2.1"
+    "@types/node": "^24.5.2",
+    "@types/sharp": "^0.32.0",
+    "prettier": "^3.6.2"
   },
   "files": [
     "lib"
