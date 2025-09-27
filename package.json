@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "watch": "pmpm build -w",
-    "prepublishOnly": "pmpm build"
+    "watch": "pnpm build -w",
+    "prepublishOnly": "pnpm build"
   },
   "dependencies": {
     "fast-exif": "^2.0.1",
